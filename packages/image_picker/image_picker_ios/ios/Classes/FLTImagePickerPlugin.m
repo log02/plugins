@@ -584,7 +584,7 @@ typedef NS_ENUM(NSInteger, ImagePickerClassType) { UIImagePickerClassType, PHPic
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-  [picker dismissViewControllerAnimated:YES completion:nil];
+  [picker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
   [self sendCallResultWithSavedPathList:nil];
 }
 
